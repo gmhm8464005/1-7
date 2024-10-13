@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Новий градієнт від теплого до холодного */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Додано більше простору між кнопками */
+    margin-bottom: 40px;
+}
+
+.color-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; /* Округлені кути */
+    cursor: pointer;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4); /* Більша тінь для об’єму */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.color-button:hover::after {
+    opacity: 0.3;
+}
+
+#red { background-color: #ff4e50; } /* Оновлено відтінки для яскравішого вигляду */
+#blue { background-color: #0099cc; }
+#green { background-color: #66bb6a; }
+#yellow { background-color: #fdd835; }
+
+.color-button.active {
+    transform: scale(1.15); /* Трохи більше збільшення при активації */
+    filter: brightness(1.2);
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Додано тінь для об'єму */
+}
+
+button:hover {
+    background-color: #ff5722;
+    transform: translateY(-2px); /* Легкий ефект підняття при наведенні */
+}

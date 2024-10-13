@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style>
+        /* Базовий стиль для сторінки */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    text-align: center;
+}
+
+        /* Стиль для секцій */
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* Ефект паралаксу для фонових зображень */
+        .parallax {
+            background-image: url('https://www.rmit.edu.au/content/dam/rmit/rmit-images/news/2017/Jan/Research_set_to_take_forest_assessment_in_Europe_to_new_heights/EuropeForestAssessment2_L_1220px_72dpi.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Стиль для вмісту секцій */
+        .content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Медіа-запити для вимкнення паралаксу на планшетах і мобільних */
+        @media (max-width: 1024px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Прибираємо відступ у останнього елемента */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">First</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="Contact.html">Feedback</a></li>
+                <li><a href="responsive-flex.html">Flex Сторінка</a></li>
+                <li><a href="parallax.html">Parallax Effect</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Перша секція з фоновим зображенням (parallax) -->
+    <div class="parallax">
+        <div style="color: white;" class="content">Ефект паралаксу</div>
+    </div>
+
+    <!-- Друга секція (звичайний вміст) -->
+    <div class="section" style="background-color: #26ef0c">
+        <div class="content">Секція без паралаксу</div>
+    </div>
+
+    <!-- Третя секція з фоновим зображенням (parallax) -->
+    <div class="parallax">
+        <div style="color: white;" class="content">Ще одна секція з паралаксом</div>
+    </div>
+
+    <!-- Четверта секція (звичайний вміст) -->
+    <div class="section" style="background-color: #6bcced">
+        <div class="content">Кінцева секція</div>
+    </div>
+
+</body>
+</html>

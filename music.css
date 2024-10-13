@@ -1,0 +1,86 @@
+/* Основні стилі для сторінки */
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Оновлений градієнт для більш теплого вигляду */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стиль для заголовка */
+h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Додана глибша тінь для заголовка */
+}
+
+/* Контейнер для інструментів */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+/* Стиль для кожного інструмента */
+.instrument {
+    width: 200px; /* Збільшений розмір для зручнішого натискання */
+    height: 250px;
+    background-color: #db6ca9;
+    color: black;
+    border-radius: 25px; /* Більше округлення кутів для м'якшого вигляду */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Збільшена тінь для глибини */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.instrument:hover {
+    transform: translateY(-10px) rotate(3deg); /* Додано ефект легкого повороту при наведенні */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Іконка для кожного інструмента */
+.icon {
+    margin-bottom: 15px;
+}
+
+.icon img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; /* Округлення іконки */
+    background-color: rgba(255, 255, 255, 0.2); /* Легка біла тінь під іконкою */
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.instrument:hover .icon img {
+    transform: scale(1.1); /* Легке збільшення іконки при наведенні */
+}
+
+/* Текст під іконкою */
+p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333; /* Текст став темнішим для кращої читабельності */
+}
+
+.active {
+    background-color: #e429da;
+    box-shadow: 0 8px 20px rgba(213, 45, 247, 0.884); /* Додатковий ефект для активного елемента */
+}

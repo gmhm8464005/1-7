@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e02096;
+    line-height: 1.6;
+}
+
+h1 {
+    font-weight: bold;
+    color: #131111;
+}
+
+h2 {
+    color: #765e71;
+}
+
+p {
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+
+.header {
+    background-image: url('header-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}

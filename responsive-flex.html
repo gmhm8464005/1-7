@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flex Page</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: url('https://static01.nytimes.com/newsgraphics/2022-08-23-europe-logging/75c84d8328216be094862f29875c4d6610b0f02d/_assets/opener.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        .content div {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media(max-width: 768px) {
+            .content div {
+                flex: 1 1 100%;
+            }
+        }
+
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Прибираємо відступ у останнього елемента */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>We Are Europe</h1>
+                <nav>
+            <ul>
+                <li><a href="index.html">First</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="Contact.html">Feedback</a></li>
+                <li><a href="responsive-flex.html">Flex Сторінка</a></li>
+                <li><a href="parallax.html">Parallax Effect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2 style="color: black;">Explore the beautiful Europe</h2>
+    </div>
+
+    <div class="content">
+        <div>
+            <img src="OIP (4).jfif" alt="Mountain View" style="max-width:100%;">
+            <h3>Forest</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto totam quibusdam incidunt reiciendis ad accusamus, 
+                alias iste molestias eveniet ex saepe deserunt quaerat ratione nobis quas! Consequuntur earum quis nostrum!</p>
+        </div>
+        <div>
+            <img src="UAE-1.jpg" alt="Beach View" style="max-width:100%;">
+            <h3>Forest</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto totam quibusdam incidunt reiciendis ad accusamus, 
+                alias iste molestias eveniet ex saepe deserunt quaerat ratione nobis quas! Consequuntur earum quis nostrum!</p>
+        </div>
+    </div>
+</body>
+</html>
